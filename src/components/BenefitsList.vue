@@ -23,7 +23,7 @@ defineProps<{
         </div>
 
         <div class="benefits-list__items">
-            <div v-for="item in items" :id="item.iconFile" class="benefit-item">
+            <div v-for="item in items" :key="item.iconFile" class="benefit-item">
                 <img class="benefit-item__icon" :src="ICONS_PATH + item.iconFile">
                 <h3 class="benefit-item__title">{{ item.title }}</h3>
                 <div class="benefit-item__text1">{{ item.text1 }}</div>
@@ -109,7 +109,7 @@ defineProps<{
     &__text1 {
         width: 72px;
         text-align: center;
-        
+
         margin-left: auto;
     }
 
